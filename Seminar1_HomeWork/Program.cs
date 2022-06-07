@@ -37,7 +37,7 @@ Console.WriteLine("max = " + max);*/
 
 //Задача №3
 
-Console.Write("Input number: ");
+/*Console.Write("Input number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 double chastnoe = num % 2;
@@ -49,4 +49,26 @@ if (chastnoe == 0)
 else
 {
     Console.WriteLine("number is uneven");
+}*/
+
+//Задача №4
+
+Console.Write("Input number:");
+
+int num = Convert.ToInt32(Console.ReadLine());
+
+int count = 1;
+
+if (num >= 2)
+    while (count <= num)
+    {
+        if (count % 2 == 0)
+        {
+            Console.Write(count + " ");
+        }
+        count ++;
+    }
+else
+{
+    Console.WriteLine("no even numbers");
 }
