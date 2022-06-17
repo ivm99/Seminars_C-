@@ -1,28 +1,28 @@
-﻿ //Пример 1
- 
- /*int FindMaxPart(int num)
- {
-     int dec, ed;
+﻿//Пример 1
 
-      if (num >=10 && num <=99)
-       {
-           dec = num /10;
-           ed = num % 10;
+/*int FindMaxPart(int num)
+{
+    int dec, ed;
 
-           if (dec > ed)
+     if (num >=10 && num <=99)
+      {
+          dec = num /10;
+          ed = num % 10;
+
+          if (dec > ed)
+          {
+               return dec;
+           }
+           else
            {
-                return dec;
-            }
-            else
-            {
-                return ed;
-            }
-        }
-        else
-        {
-            return -1;
-        }
- }
+               return ed;
+           }
+       }
+       else
+       {
+           return -1;
+       }
+}
 
 
 Console.WriteLine("Input two-digit number: ");
@@ -31,12 +31,12 @@ int result = FindMaxPart(a);
 
 if (result == -1)
 {
-    Console.WriteLine("Your number is not a two-digit");
+   Console.WriteLine("Your number is not a two-digit");
 }
-    
+
 else
 {
-    Console.WriteLine("Bigger number of " + a + " is " + result);
+   Console.WriteLine("Bigger number of " + a + " is " + result);
 }*/
 
 //Задача 1
@@ -89,7 +89,7 @@ Console.WriteLine(c);*/
 
 bool CheckEven7and23(int num)
 {
-    if ((num%7==0) && (num%23==0)) return true;
+    if ((num % 7 == 0) && (num % 23 == 0)) return true;
     else return false;
 }
 
@@ -98,4 +98,4 @@ int a = Convert.ToInt32(Console.ReadLine());
 
 
 if (CheckEven7and23(a)) Console.WriteLine("Число кратно 7 и 23 одновременно");
-else Console.WriteLine($"Число не кратно 7 и 23 одновременно. Остаток от деления: {a/(23*7)}");
+else Console.WriteLine($"Число не кратно 7 и 23 одновременно. Остаток от деления: {a / (23 * 7)}");
