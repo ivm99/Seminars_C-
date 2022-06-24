@@ -85,7 +85,7 @@ GetFibonacci(number);
 
 //Задача 3 Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 
-int[] ConvertDecToDvoich(int n)
+/* int[] ConvertDecToDvoich(int n)
 {
     int ost = n;
     int size = 0;
@@ -131,4 +131,21 @@ for (int i = 0; i < myArray.Length; i++)
 {
     Console.Write(myArray[i] + " ");
 }
+ */
 
+string ConvertToBinar(int n)
+{
+    string binar = String.Empty;
+    int ost = n;
+
+    while (ost > 0 )
+    {
+        binar = ost%2 + binar;
+        ost = ost / 2;
+    }
+    return binar;
+}
+
+int num = 100;
+
+Console.WriteLine(ConvertToBinar(num));
