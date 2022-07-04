@@ -130,7 +130,7 @@ ShowArray(myArray); */
 
 //Задача 2. Из двумерного массива целых чисел удалить строку и столбец, на пересечении которых расположен наименьший элемент.
 
-int[,] CreateTwoDimArray(int m, int n, int min, int max)
+/* int[,] CreateTwoDimArray(int m, int n, int min, int max)
 {
     int[,] array = new int[m, n];
 
@@ -209,4 +209,45 @@ Console.WriteLine();
 
 myArray = RemoveLineAndRowWithMinElement(myArray);
 
-ShowArray(myArray); 
+ShowArray(myArray);  */
+
+
+
+int[] SorElementsFromMinToMax(int[] array)
+{
+    for (int k = 0; k < array.Length - 1; k++)
+    {
+        int minIndex = k;
+        
+        for (int j = k + 1; j < array.Length; j++)
+            if (array[j] < array[minIndex]) minIndex = j;
+        
+        if (minIndex != k)
+        {
+            int temp = array[minIndex];
+            array[minIndex] = array[k];
+            array[k] = temp;
+        }
+        
+    }
+   
+    return array;
+}
+
+void PrintArray(int [] array)
+{
+    Console.WriteLine();
+    
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+}
+
+int [] myArray = new int [] {1,2,3,9,1,4,2};
+
+PrintArray(myArray);
+
+myArray = SorElementsFromMinToMax(myArray);
+
+PrintArray(myArray);
